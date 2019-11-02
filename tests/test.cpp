@@ -1,4 +1,4 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2019 DM00n <teamvortex@yandex.ru>
 
 #include <gtest/gtest.h>
 

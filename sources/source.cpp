@@ -1,3 +1,4 @@
+// Copyright 2019 DM00n <teamvortex@yandex.ru>
 #include "json.hpp"
 #include <iostream>
 
@@ -5,7 +6,7 @@ int main() {
     std::string str1;
     std::ifstream in;
     std::string line;
-    in.open(R"(D:\project\3sem_parserJSON\test.txt)");
+    in.open(R"(C:\Users\Rex\Desktop\sdfsd\lab-01-parser\test.txt)");
     if (!in) {
         std::cout << "error opening file";
         return 0;
@@ -15,8 +16,6 @@ int main() {
     }
     in.close();
     Json instance(str1);
-    instance.parseFile(R"(D:\project\3sem_parserJSON\test.txt)");
-
-//instance.print();
+    instance.parseFile(R"(C:\Users\Rex\Desktop\sdfsd\lab-01-parser\test.txt)");
     return 0;
 }

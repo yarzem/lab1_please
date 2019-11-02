@@ -1,4 +1,4 @@
-#ifndef INC_3SEM_PARSERJSON_JSON_H
+#ifndef INCLUDE_JSON_HPP_
 #define INC_3SEM_PARSERJSON_JSON_H
 
 #include <fstream>
@@ -7,12 +7,14 @@
 #include <iostream>
 #include <cstring>
 #include <vector>
+#include <string>
 
 class Json {
 private:
     std::map <std::string, std::any> _json_map;
     std::vector <std::any> _json_vector;
     std::string _json_string;
+
 public:
     void print();
 
@@ -26,7 +28,7 @@ public:
 
     bool is_empty(char s) const;
 
-    Json(const std::string &s);
+    explicit Json(const std::string &s);
 
     Json();
 
@@ -34,22 +36,13 @@ public:
 
     bool is_object() const;
 
-    // Метод возвращает значение по ключу key, если экземпляр является JSON-объектом.
-    // Значение может иметь один из следующих типов: Json, std::string, double, bool или быть пустым.
-    // Если экземпляр является JSON-массивом, генерируется исключение.
     std::any &operator[](const std::string &key);
 
-    // Метод возвращает значение по индексу index, если экземпляр является JSON-массивом.
-    // Значение может иметь один из следующих типов: Json, std::string, double, bool или быть пустым.
-    // Если экземпляр является JSON-объектом, генерируется исключение.
     std::any &operator[](int index);
 
-    // Метод возвращает объект класса Json из строки, содержащей Json-данные.
     Json parse(const std::string &s);
 
-    // Метод возвращает объекта класса Json из файла, содержащего Json-данные в текстовом формате.
     Json parseFile(const std::string &path_to_file);
-
 };
 
-#endif
+#endif  // INCLUDE_JSON_HPP_
