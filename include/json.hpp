@@ -1,5 +1,6 @@
+// Copyright 2019 DM00n <teamvortex@yandex.ru>
 #ifndef INCLUDE_JSON_HPP_
-#define INC_3SEM_PARSERJSON_JSON_H
+#define INCLUDE_JSON_HPP_
 
 #include <fstream>
 #include <any>

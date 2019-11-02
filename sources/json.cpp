@@ -6,7 +6,6 @@ bool Json::is_empty(char s) const {
 }
 
 bool Json::is_bool(char s, int j) const {
-
     if (s == 'f') {
         char ex[6];
         for (int i = 0; i < 5; i++) {
@@ -93,7 +92,8 @@ bool Json::is_array() const {
             }
             if (symbol == ']') {
                 unsigned j = i + 1;
-                while ((j <= _json_string.length()) && (is_empty(_json_string[j]))) { j++; }
+                while ((j <= _json_string.length())
+                    && (is_empty(_json_string[j]))) { j++; }
                 if (_json_string[j] == '[') return false;
             }
             if (symbol != ',') {
@@ -297,9 +297,9 @@ bool Json::is_object() const {
             if ((quotes % 2 == 0) && (symbol == ':')) {
                 unsigned j = i + 1;
                 while (j < _json_string.length()) {
-                    if (is_empty(_json_string[j])) {
+                    if (is_empty(_json_string[j])){
                         j++;
-                    } else
+                    }else
                         break;
                 }
                 char ch = _json_string[j];
@@ -469,7 +469,8 @@ Json Json::parse(const std::string &s) {
                         double value1 = static_cast<double>(s[j] - 48);
                         unsigned k = j + 1;
                         while (s[k] != ',') {
-                            value1 = value1 * 10 + static_cast<double>(s[k] - 48);
+                            value1 = value1 * 10
+                                    + static_cast<double>(s[k] - 48);
                             k++;
                         }
                         value = value1;
