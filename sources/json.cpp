@@ -299,8 +299,9 @@ bool Json::is_object() const {
                 while (j < _json_string.length()) {
                     if (is_empty(_json_string[j])){
                         j++;
-                    } else
+                    } else {
                         break;
+                    }
                 }
                 char ch = _json_string[j];
                 unsigned k = j + 1;
