@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Rex\Desktop\sdfsd\lab-01-parser
+"C:\Program Files\JetBrains\CLion 2019.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\sdfsd\lab-01-parser
 CMake Error at CMakeLists.txt:14 (include):
   include could not find load file:
 
