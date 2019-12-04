@@ -545,7 +545,7 @@ Json Json::parse(const std::string &s) {
                     }
                     skip_step = k - i;
                     Json l_array(little_arr_string);
-                    l_array = l_array.parse(_json_string);
+                    l_array = l_array.parse(little_arr_string);
                     value = l_array;
                     continue;
                 }
@@ -564,7 +564,7 @@ Json Json::parse(const std::string &s) {
                     }
                     skip_step = k - i;
                     Json l_arr(little_arr_string);
-                    l_arr = l_arr.parse(_json_string);
+                    l_arr = l_arr.parse(little_arr_string);
                     value = l_arr;
                     continue;
                 }
