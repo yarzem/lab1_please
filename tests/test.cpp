@@ -1,6 +1,6 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
 #include <gtest/gtest.h>
-#include "header.hpp"
+#include "json.hpp"
 
 TEST(Parse, Text){
 Json object("{\n"
