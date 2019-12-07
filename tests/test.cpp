@@ -2,20 +2,19 @@
 #include <json.hpp>
 #include <gtest/gtest.h>
 TEST(Parse, Text){
-std::string json = "{\n"
-                   "        \"lastname\" : \"Ivanov\",\n"
-                   "        \"firstname\" : \"Ivan\",\n"
-                   "        \"age\" : 25,\n"
-                   "        \"islegal\" : false,\n"
-                   "        \"marks\" : [\n"
-                   "        4,5,5,5,2,3\n"
-                   "        ],\n"
-                   "        \"address\" : {\n"
-                   "            \"city\" : \"Moscow\",\n"
-                   "                    \"street\" : \"Vozdvijenka\"\n"
-                   "        }\n"
-                   "}";
-Json object = Json::parse(json);
+Json object("{\n"
+            "    \"lastname\" : \"Ivanov\",\n"
+            "    \"firstname\" : \"Ivan\",\n"
+            "    \"age\" : 25,\n"
+            "    \"islegal\" : false,\n"
+            "    \"marks\" : [\n"
+            "    \t4,5,5,5,2,3\n"
+            "    ],\n"
+            "    \"address\" : {\n"
+            "    \t\"city\" : \"Moscow\",\n"
+            "        \"street\" : \"Vozdvijenka\"\n"
+            "    }\n"
+            "}");
 EXPECT_EQ(std::any_cast<std::string>(object["lastname"]), "Ivanov");
 EXPECT_EQ(std::any_cast<bool>(object["islegal"]), false);
 EXPECT_EQ(std::any_cast<int>(object["age"]), 25);
