@@ -1,6 +1,7 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
-#include <json.hpp>
 #include <gtest/gtest.h>
+#include "header.hpp"
+
 TEST(Parse, Text){
 Json object("{\n"
             "    \"lastname\" : \"Ivanov\",\n"
@@ -27,6 +28,7 @@ auto address = std::any_cast<Json>(object["address"]);
 EXPECT_EQ(std::any_cast<std::string>(address["city"]), "Moscow");
 EXPECT_EQ(std::any_cast<std::string>(address["street"]), "Vozdvijenka");
 }
+
 int main(int argc, char **argv){
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
