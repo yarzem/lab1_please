@@ -1,5 +1,5 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
-#include "json.h"
+#include "json.hpp"
 
 bool Json::is_empty(char s) const {
     return (s == ' ') || (s == '\n') || (s == '\t');
