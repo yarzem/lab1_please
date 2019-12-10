@@ -1,5 +1,5 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
-#include "json.hpp"
+#include "json.h"
 
 bool Json::is_empty(char s) const {
     return (s == ' ') || (s == '\n') || (s == '\t');
@@ -93,7 +93,7 @@ bool Json::is_array() const {
             if (symbol == ']') {
                 unsigned j = i + 1;
                 while ((j <= _json_string.length())
-                    && (is_empty(_json_string[j]))) { j++; }
+                       && (is_empty(_json_string[j]))) { j++; }
                 if (_json_string[j] == '[') return false;
             }
             if (symbol != ',') {
@@ -443,7 +443,7 @@ Json Json::parse(const std::string &s) {
                         }
                         skip_step = k - i;
                         Json l_array(little_arr_string);
-                        l_array = l_array.parse(_json_string);
+                        l_array = l_array.parse(little_arr_string);
                         value = l_array;
                         continue;
                     }
@@ -462,7 +462,7 @@ Json Json::parse(const std::string &s) {
                         }
                         skip_step = k - i + 1;
                         Json l_obj(little_obj_string);
-                        l_obj = l_obj.parse(_json_string);
+                        l_obj = l_obj.parse(little_obj_string);
                         value = l_obj;
                         continue;
                     }
@@ -471,7 +471,7 @@ Json Json::parse(const std::string &s) {
                         unsigned k = j + 1;
                         while (s[k] != ',') {
                             value1 = value1 * 10
-                                    + static_cast<double>(s[k] - 48);
+                                     + static_cast<double>(s[k] - 48);
                             k++;
                         }
                         value = value1;
