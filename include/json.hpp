@@ -19,7 +19,7 @@ public:
 
     int detect_type(std::string s, unsigned j) const;
 
-    bool is_letter(std::string s,unsigned j) const;
+    bool is_letter(std::string s, unsigned j) const;
 
     bool is_number(std::string s, unsigned j) const;
 

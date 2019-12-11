@@ -132,7 +132,6 @@ Json Json::parse(const std::string &s) {
                         }
                         skip_step = k - i;
                         Json l_array(little_arr_string);
-                        //l_array = l_array.parse(little_arr_string);
                         value = l_array;
                         continue;
                     }
@@ -151,7 +150,6 @@ Json Json::parse(const std::string &s) {
                         }
                         skip_step = k - i + 1;
                         Json l_obj(little_obj_string);
-                        //l_obj = l_obj.parse(little_obj_string);
                         value = l_obj;
                         continue;
                     }
@@ -234,7 +232,6 @@ Json Json::parse(const std::string &s) {
                     }
                     skip_step = k - i;
                     Json l_array(little_arr_string);
-                    //l_array = l_array.parse(little_arr_string);
                     value = l_array;
                     continue;
                 }
@@ -253,7 +250,6 @@ Json Json::parse(const std::string &s) {
                     }
                     skip_step = k - i;
                     Json l_arr(little_arr_string);
-                    //l_arr = l_arr.parse(little_arr_string);
                     value = l_arr;
                     continue;
                 }
@@ -276,7 +272,7 @@ Json Json::parse(const std::string &s) {
                         else
                             break;
                     }
-                    type = detect_type(s, j);//0-bool, 1-str, 2-mas, 3-obj, 4-int
+                    type = detect_type(s, j);
                     continue;
                 }
             }
