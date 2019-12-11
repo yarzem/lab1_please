@@ -11,21 +11,19 @@
 #include <string>
 
 class Json {
-private:
+public:
     std::map <std::string, std::any> _json_map;
     std::vector <std::any> _json_vector;
-    std::string _json_string;
 
-public:
     void print();
 
-    int detect_type(unsigned j) const;
+    int detect_type(std::string s, unsigned j) const;
 
-    bool is_letter(unsigned j) const;
+    bool is_letter(std::string s,unsigned j) const;
 
-    bool is_number(unsigned j) const;
+    bool is_number(std::string s, unsigned j) const;
 
-    bool is_bool(char s, int j) const;
+    bool is_bool(std::string s, char c, int j) const;
 
     bool is_empty(char s) const;
 
