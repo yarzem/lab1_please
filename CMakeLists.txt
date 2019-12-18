@@ -31,12 +31,12 @@ find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(lab-01-parser STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/json.cpp
-         sources/nlohmann_json.cpp)
+        sources/n_json.cpp)
 add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
 )
 
-add_executable(n_json sources/nlohmann_json.cpp)
+add_executable(n_json sources/n_json.cpp)
 
 target_include_directories(lab-01-parser
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
