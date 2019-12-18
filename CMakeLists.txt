@@ -46,7 +46,7 @@ target_include_directories(tests
 )
 
 target_link_libraries(tests GTest::main lab-01-parser)
-target_link_libraries(n_json PUBLIC nlohmann_json::nlohmann_json)
+target_link_libraries(n_json PUBLIC nlohmann_json)
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
