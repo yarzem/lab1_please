@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 using json = nlohmann::json;
 
 json magic(json obj) {
@@ -34,22 +32,3 @@ json magic(json obj) {
     }
     return rez;
 }
-
-int main() {
-
-    std::cout << "Hello, World!" << std::endl;
-
-    json obj = json::array({
-                                   {"Si-9.15", "RTS-9.15", "GAZP-9.15"},
-                                   {100024, 100027, 100050},
-                                   {"Futures contract for USD/RUB",
-                                               "Futures contract for index RTS",
-                                                           "Futures contract for Gazprom shares"}
-                           });
-
-    json test = magic(obj);
-    cout << test;
-
-    return 0;
-}
-

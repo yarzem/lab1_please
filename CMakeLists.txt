@@ -36,7 +36,7 @@ add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
 )
 
-add_executable(n_json nlohmann_json.cpp)
+add_executable(n_json sources/nlohmann_json.cpp)
 
 target_include_directories(lab-01-parser
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
