@@ -34,7 +34,7 @@ add_library(Json STATIC
 add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         include/nlohmann.h)
-add_executable(Json
+add_executable(source
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/n_json.cpp
         include/nlohmann.h)
 add_executable(main
