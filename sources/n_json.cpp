@@ -1,7 +1,7 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
 
 #include <iostream>
-#include "nlohmann.h"
+#include "nlohmann.hpp"
 
 using json = nlohmann::json;
 

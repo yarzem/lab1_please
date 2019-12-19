@@ -30,13 +30,13 @@ find_package(GTest CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(Json STATIC
-  ${CMAKE_CURRENT_SOURCE_DIR} /sources/n_json.cpp include/nlohmann.h)
+  ${CMAKE_CURRENT_SOURCE_DIR} /sources/n_json.cpp include/nlohmann.hpp)
 add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-        include/nlohmann.h)
+        include/nlohmann.hpp)
 add_executable(source
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/n_json.cpp
-        include/nlohmann.h)
+        include/nlohmann.hpp)
 target_include_directories(Json
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         $<INSTALL_INTERFACE:include>
