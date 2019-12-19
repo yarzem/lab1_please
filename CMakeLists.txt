@@ -37,9 +37,6 @@ add_executable(tests
 add_executable(source
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/n_json.cpp
         include/nlohmann.h)
-add_executable(main
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
-        include/nlohmann.h)
 target_include_directories(Json
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         $<INSTALL_INTERFACE:include>
