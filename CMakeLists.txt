@@ -30,15 +30,13 @@ find_package(GTest CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(lab-01-parser STATIC
-  ${CMAKE_CURRENT_SOURCE_DIR} /sources/n_json.cpp include/nlohmann.hpp)
+  ${CMAKE_CURRENT_SOURCE_DIR} /sources/nomer3.cpp
+)
 add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-        include/nlohmann.hpp
+        /sources/nomer3.cpp
 )
-add_executable(source
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/n_json.cpp
-        include/nlohmann.hpp
-)
+
 target_include_directories(lab-01-parser
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
         nlohmann_json::nlohmann_json
@@ -48,7 +46,7 @@ target_include_directories(tests
         nlohmann_json::nlohmann_json
 )
 
-target_link_libraries(tests Json GTest::main nlohmann_json::nlohmann_json lab-01-parser)
+target_link_libraries(tests PUBLIC GTest::main nlohmann_json::nlohmann_json lab-01-parser)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
