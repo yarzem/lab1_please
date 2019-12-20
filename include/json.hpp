@@ -504,7 +504,7 @@ private:
             string kek = any_cast<string>(value);
             currentMap.insert(
                     pair<string, any>(key, getMap(1, rang,
-                                                  newMap, any_cast<string>(value))));
+                            newMap, any_cast<string>(value))));
             rang--;
             for (int i = 0; i < rang; i++) {
                 std::cout << "     ";
@@ -547,8 +547,9 @@ private:
                     if (std::string(type) == "i") {
                         std::cout <<
                                   any_cast<int>(any_cast < vector < any >>
-                                                                        (value)[j]);
-                        if (j < any_cast < vector < any >> (value).size() - 1) {
+                                  (value)[j]);
+                        if (j < any_cast < vector < any >>
+                        (value).size() - 1) {
                             std::cout << ", ";
                         }
                         continue;
@@ -556,17 +557,18 @@ private:
                     if (std::string(type) == "f") {
                         std::cout <<
                                   any_cast<float>(any_cast < vector < any >>
-                                                                          (value)[j]);
-                        if (j < any_cast < vector < any >> (value).size() - 1) {
+                                  (value)[j]);
+                        if (j < any_cast < vector < any >>
+                        (value).size() - 1) {
                             std::cout << ", ";
                         }
                         continue;
                     } else {
                         std::cout <<
                                   any_cast<string>(any_cast < vector < any >>
-                                                                           (value)[j]);
+                                  (value)[j]);
                         if (j < any_cast < vector < any >>
-                                                        (value).size() - 1) {
+                        (value).size() - 1) {
                             std::cout << ", ";
                         }
                         continue;
