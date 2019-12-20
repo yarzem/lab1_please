@@ -44,5 +44,4 @@ public:
     Json parseFile(const std::string &path_to_file);
 };
 
-
 #endif  // INCLUDE_JSON_HPP_
