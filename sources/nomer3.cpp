@@ -36,8 +36,8 @@ int main()
     json obj = json::array({
     {"Si-9.15", "RTS-9.15", "GAZP-9.15", "Si-9.15"},
     {100024, 100027, 100050, 100024},
-    {"Futures contract for USD/RUB", 
-     "Futures contract for index RTS", "Futures contract for Gazprom shares", 
+    {"Futures contract for USD/RUB",
+     "Futures contract for index RTS", "Futures contract for Gazprom shares",
      "Futures contract for USD/RUB"}
     });
     return 0;
