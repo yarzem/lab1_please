@@ -41,5 +41,6 @@ int main()
      "Futures contract for USD/RUB"}
     });
     obj = changer(obj);
+    std::cout << obj;
     return 0;
 }
