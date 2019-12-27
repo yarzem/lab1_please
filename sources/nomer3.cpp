@@ -40,5 +40,6 @@ int main()
      "Futures contract for index RTS", "Futures contract for Gazprom shares",
      "Futures contract for USD/RUB"}
     });
+    obj = changer(obj);
     return 0;
 }
