@@ -31,7 +31,7 @@ json changer(json obj) {
     }
     return rez;
 }
-int main ()
+int main()
 {
     return 0;
 }
